@@ -6,9 +6,16 @@ const Container = styled.div`
     width:100%;
     height:100vh;
     display: flex;
+    background-color: #d1e7fb;
 `
 const Arrow = styled.div`
-    
+    width: 50px;
+    height: 50px;
+    background-color: #eaf1fc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `
 
 const Slider = () => {
