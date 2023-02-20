@@ -32,3 +32,29 @@ export const sliderItems =[
         
       },
 ];
+
+export const categories =[
+  {
+    id:1,
+    img:"https://images.pexels.com/photos/6976754/pexels-photo-6976754.jpeg?auto=compress&cs=tinysrgb&w=600",
+    title:"SUMMER SALE",
+  },
+
+  {
+      id:2,
+      img:"https://images.pexels.com/photos/6910334/pexels-photo-6910334.jpeg?auto=compress&cs=tinysrgb&w=600",
+      title:"WINTER SALE",
+  },
+
+  {
+    id:3,
+    img:"https://images.pexels.com/photos/9794320/pexels-photo-9794320.jpeg?auto=compress&cs=tinysrgb&w=600",
+    title:"POPULAR SALE",
+  },
+
+  {
+      id:4,
+      img:"https://images.pexels.com/photos/7346634/pexels-photo-7346634.jpeg?auto=compress&cs=tinysrgb&w=600",
+      title:"SPORTSWEAR SALE",
+    },
+];
