@@ -92,8 +92,26 @@ export const popularProducts =[
     },
 
     {
-      id:4,
-      img:"https://images.pexels.com/photos/9558573/pexels-photo-9558573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      id:6,
+      img:"https://images.pexels.com/photos/7273365/pexels-photo-7273365.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       
     },
+
+    {
+      id:7,
+      img:"https://images.pexels.com/photos/12375732/pexels-photo-12375732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      
+    },
+
+    {
+      id:8,
+      img:"https://images.pexels.com/photos/7180654/pexels-photo-7180654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      
+    },
+    {
+      id:8,
+      img:"https://images.pexels.com/photos/7180654/pexels-photo-7180654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      
+    },
+    
 ];
