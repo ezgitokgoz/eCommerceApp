@@ -20,7 +20,7 @@ const ImgContainer=styled.div`
 
 const Image=styled.img`
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     object-fit: cover;//goruntunun boyuna zarar vermiyor
 `
 
@@ -116,10 +116,10 @@ const Product = () => {
 
         <Wrapper>
             <ImgContainer>
-                <Image src="https://images.pexels.com/photos/1957154/pexels-photo-1957154.jpeg?auto=compress&cs=tinysrgb&w=600"/>
+                <Image src="https://images.pexels.com/photos/7026407/pexels-photo-7026407.jpeg?auto=compress&cs=tinysrgb&w=600"/>
             </ImgContainer>
             <InfoContainer>
-                <Title>DENIM</Title>
+                <Title>PUFFER JACKET</Title>
                 <Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sed hic, voluptates ea temporibus alias sapiente vel minus, porro, animi nesciunt quis! Maxime deleniti repellendus quas non temporibus! In, exercitationem.</Desc>
                 <Price>200 $</Price>
                 <FilterContainer>
