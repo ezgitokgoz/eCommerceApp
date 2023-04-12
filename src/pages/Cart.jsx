@@ -4,12 +4,14 @@ import Announcement from '../components/Announcement'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { Add, Remove } from '@mui/icons-material'
+import { mobile } from '../responsive'
 
 const Container = styled.div`
 
 `
 const Wrapper = styled.div`
   padding: 20px;
+  ${mobile({padding:"10px"})}
 `
 const Title = styled.h1`
   font-weight: 300;
@@ -25,13 +27,22 @@ const TopButton = styled.button`
   padding: 10px;
   font-weight: 600;
   cursor: pointer;
+  &:hover {
+      background-color: #fdeed5;
+      //transform: scale(1.05);
+    }
   border:${props=>props.type === "filled" && "none"} ;
-  background-color:${props=>props.type === "filled" ? "black" : "transparent"} ;
   color:${props=>props.type === "filled" && "white"} ;
+  background-color:${props=>props.type === "filled" ? "black" : "transparent"} ;
+  
 
 `
-const TopTexts = styled.div`
 
+
+
+const TopTexts = styled.div`
+  
+  ${mobile({display:"none"})}
 `
 const TopText = styled.span`
   text-decoration: underline;
@@ -42,6 +53,7 @@ const TopText = styled.span`
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
+  ${mobile({flexDirection:"column"})}
 `
 const Info = styled.div`
   flex:3;
@@ -50,6 +62,7 @@ const Info = styled.div`
 const Product = styled.div`
   display:flex;
   justify-content: space-between;
+  ${mobile({flexDirection:"column"})}
 `
 const ProductDetail= styled.div`
   flex:2;
@@ -64,6 +77,8 @@ const PriceDetail=styled.div`
 `
 const Image = styled.img`
   width: 200px;
+  height:150px;
+  object-fit:cover;
 `
 const Details = styled.div`
   padding: 20px;
@@ -96,16 +111,18 @@ const ProductAmountContainer = styled.div`
 const ProductAmount = styled.div`
   font-size: 24px;
   margin: 5px;
+  ${mobile({margin:"5px 15px"})}
 `
 
 const ProductPrice = styled.div`
   font-size: 30px;
   font-weight: 200;
+  ${mobile({marginBottom:"20px"})}
 `
 const Hr = styled.hr`
-  background-color:#eee ;
+  background-color:#eeeeee ;
   border:none;
-  height: 1px;
+  height: 2px;
 `
 const Summary = styled.div`
   flex:1;
@@ -113,6 +130,7 @@ const Summary = styled.div`
   border-radius: 10px;
   padding: 20px;
   height: 50vh;
+  background-color:#fcf9f4;
 `
 
 const SummaryTitle = styled.h1`
@@ -135,9 +153,14 @@ const SummaryItemPrice = styled.span``
 const Button = styled.button`
   width: 100%;
   padding: 10px;
-  background-color: black;
-  color: white;
+  background-color: #ffffff;
+  cursor:pointer;
+  color: #000000;
   font-weight: 600;
+  &:hover {
+      background-color: #2e8b57;
+      color:white;
+    }
 `
 
 
@@ -155,19 +178,19 @@ const Cart = () => {
                 <TopText>Shopping Bag(2)</TopText>
                 <TopText>Your Wishlist(0)</TopText>
               </TopTexts>
-              <TopButton type="filled">CHECKOUT NOW</TopButton>
+              
             </Top>
             <Bottom>
               <Info>
 
                 <Product>
                   <ProductDetail>
-                    <Image src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+                    <Image src="https://images.pexels.com/photos/3782788/pexels-photo-3782788.jpeg"/>
                     <Details>
-                      <ProductName><b>Product:</b>JESSIE THUNDER SHOES</ProductName>
+                      <ProductName><b>Product:</b>HEELED SANDALS</ProductName>
                       <ProductId><b>ID:</b>9876788652428</ProductId>
-                      <ProductColor color="gray"/>
-                      <ProductSize><b>Size:</b>37.5</ProductSize>
+                      <ProductColor color="#7e452e"/>
+                      <ProductSize><b>Size:</b>38</ProductSize>
                     </Details>
                   </ProductDetail>
                   <PriceDetail>
@@ -176,18 +199,18 @@ const Cart = () => {
                       <ProductAmount>2</ProductAmount>
                       <Remove/>
                     </ProductAmountContainer>
-                    <ProductPrice>300 TL</ProductPrice>
+                    <ProductPrice>40 $</ProductPrice>
                   </PriceDetail>
                 </Product>
                 <Hr/>
                 <Product>
                   <ProductDetail>
-                    <Image src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+                    <Image src="https://images.pexels.com/photos/3782786/pexels-photo-3782786.jpeg"/>
                     <Details>
-                      <ProductName><b>Product:</b>JESSIE THUNDER SHOES</ProductName>
-                      <ProductId><b>ID:</b>9876788652428</ProductId>
-                      <ProductColor color="gray"/>
-                      <ProductSize><b>Size:</b>37.5</ProductSize>
+                      <ProductName><b>Product:</b>HEELED SANDALS</ProductName>
+                      <ProductId><b>ID:</b>9876788652429</ProductId>
+                      <ProductColor color="#2e8b57"/>
+                      <ProductSize><b>Size:</b>38</ProductSize>
                     </Details>
                   </ProductDetail>
                   <PriceDetail>
@@ -196,7 +219,7 @@ const Cart = () => {
                       <ProductAmount>2</ProductAmount>
                       <Remove/>
                     </ProductAmountContainer>
-                    <ProductPrice>300 TL</ProductPrice>
+                    <ProductPrice>40 $</ProductPrice>
                   </PriceDetail>
                 </Product>
 

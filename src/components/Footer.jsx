@@ -2,10 +2,11 @@
 import { Facebook, Instagram, MailOutline, Phone, Pinterest, Room, Twitter } from '@mui/icons-material'
 import React from 'react'
 import styled from 'styled-components'
+import { mobile } from '../responsive';
 
 const Container = styled.div`
     display: flex;;
-    
+    ${mobile({flexDirection:"column"})}
 `
 const Left = styled.div`
     flex:1;
@@ -36,6 +37,7 @@ const SocialIcon = styled.div`
 const Center = styled.div`
     flex:1;
     padding: 20px;
+    ${mobile({display:"none"})}
 `
 const Title = styled.h3`
     margin-bottom: 30px;
@@ -59,6 +61,7 @@ const ListItem = styled.li`
 const Right = styled.div`
     flex:1;
     padding: 20px;
+    ${mobile({backgroundColor:"#eee"})}
 `
 
 const ContactItem =styled.div`
@@ -75,16 +78,16 @@ const Footer = () => {
   return (
     <Container>
         <Left>
-            <Logo>.LIVA.</Logo>
+            <Logo>LIVA</Logo>
             <Desc>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Ab fuga, in deleniti consequatur similique earum deserunt 
-                ea expedita et tenetur aspernatur porro saepe perferendis, 
-                vitae odio suscipit ipsa, illum doloribus. Lorem ipsum dolor, 
-                sit amet consectetur adipisicing elit. Impedit cupiditate 
-                vero non ullam fugit quis voluptatum provident enim et qui 
-                aspernatur culpa alias quidem adipisci, repellendus, nostrum 
-                magnam hic recusandae.
+            Liva started up in 1998 with a clear international mission and with the 
+            intention of dressing young people who are engaged with their environment, 
+            who live in the community and relate to each other. Young people who have a 
+            casual dress sense, who shun stereotypes and who want to feel good in whatever 
+            they are wearing. To meet their needs, Liva takes the latest international 
+            trends, mixing them with the influences that are seen on the street and in the 
+            most fashionable clubs, and reworks them according to their style thus turning 
+            them into comfortable and easy to wear garments.
             </Desc>
             <SocialContainer>
                 <SocialIcon color="3B5999">

@@ -5,6 +5,7 @@ import Announcement from '../components/Announcement'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import Newsletter from '../components/Newsletter'
+import { mobile } from '../responsive'
 
 const Container =  styled.div`
 
@@ -12,6 +13,7 @@ const Container =  styled.div`
 const Wrapper = styled.div`
     padding: 50px;
     display: flex;
+    ${mobile({padding:"10px", flexDirection:"column"})}
 `
     
 const ImgContainer=styled.div`
@@ -22,11 +24,13 @@ const Image=styled.img`
     width: 100%;
     height: 120vh;
     object-fit: cover;//goruntunun boyuna zarar vermiyor
+    ${mobile({height:"40vh"})}
 `
 
 const InfoContainer=styled.div`
     flex: 1;
     padding: 0px 50px;
+    ${mobile({padding:"10px"})}
 `
     
 const Title=styled.h1`
@@ -46,6 +50,7 @@ const FilterContainer=styled.div`
     margin: 30px 0px;
     display: flex;
     justify-content: space-between;
+    ${mobile({width:"100%"})}
 `
 const Filter=styled.div`
     display: flex;
@@ -76,6 +81,7 @@ const AddContainer=styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    ${mobile({width:"100%"})}
 `
 const AmountContainer=styled.div`
     display: flex;
@@ -102,7 +108,7 @@ const Button=styled.button`
     font-weight: 500;
 
     &:hover{
-        background-color:#eafffd
+        background-color:#eafff5
     }
 
 `
@@ -116,17 +122,25 @@ const Product = () => {
 
         <Wrapper>
             <ImgContainer>
-                <Image src="https://images.pexels.com/photos/7026407/pexels-photo-7026407.jpeg?auto=compress&cs=tinysrgb&w=600"/>
+                <Image src="https://images.pexels.com/photos/7691020/pexels-photo-7691020.jpeg"/>
             </ImgContainer>
             <InfoContainer>
-                <Title>PUFFER JACKET</Title>
-                <Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sed hic, voluptates ea temporibus alias sapiente vel minus, porro, animi nesciunt quis! Maxime deleniti repellendus quas non temporibus! In, exercitationem.</Desc>
-                <Price>200 $</Price>
+                <Title>BLAZER</Title>
+                <Desc>COMPOSITION</Desc>
+                <Desc>External: 100% polyester</Desc>
+                <Desc>Lining: 100% polyester</Desc>
+                <Desc>CARE</Desc>
+                <Desc>DO NOT WASH</Desc>
+                <Desc>DO NOT BLEACH</Desc>
+                <Desc>DO NOT TUMBLE DRY</Desc>
+                <Desc>DRY CLEAN TETRACHLORETHYLENE</Desc>
+
+                <Price>50 $</Price>
                 <FilterContainer>
                     <Filter>
                         <FilterTitle>Color</FilterTitle>
+                        <FilterColor color="green"/>
                         <FilterColor color="black"/>
-                        <FilterColor color="darkblue"/>
                         <FilterColor color="gray"/>                        
                     </Filter>
 

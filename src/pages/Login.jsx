@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { mobile } from '../responsive'
 
 
 
@@ -7,11 +8,11 @@ const Container = styled.div`
     width: 100vw;
     height: 100vh;
     background:linear-gradient(
-        rgba(255,255,255,0.5),
-        rgba(255,255,255,0.5)
+        rgba(255,255,255,0.35),
+        rgba(255,255,255,0.35)
 
     ), 
-    url("https://images.pexels.com/photos/7676887/pexels-photo-7676887.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") center;
+    url("https://images.pexels.com/photos/459271/pexels-photo-459271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") center;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -22,7 +23,7 @@ const Wrapper = styled.div`
     width: 25%;
     padding: 20px;
     background-color: white;
-
+    ${mobile({width:"75%"})}
 `
 const Title = styled.h1`
     font-size: 24px;
@@ -53,7 +54,7 @@ const Button = styled.button`
     margin-bottom: 10px;
     
     &:hover{
-        background-color:teal;
+        background-color:#2e8b57;
     }
 `
 
